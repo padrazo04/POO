@@ -2,11 +2,9 @@
 //Body of class Jugador
 #include <iostream>
 #include <string>
+#include <list>
 #include <fstream>
 #include <cstdlib>
-/*#include <ofstream>
-#include <ifstream>*/
-
 
 #include "jugador.h"
 
@@ -24,7 +22,7 @@ void Jugador::setApuestas() {
 	apuestas_.clear();
 	Apuesta aux;
 	char codigo[10], value[10], amount[10];
-	string nombrefichero= getDNI() +".txt";
+	string nombrefichero= getDNI() + ".txt";
 	ifstream f1(nombrefichero.c_str());
 
 	if(f1.is_open()) {

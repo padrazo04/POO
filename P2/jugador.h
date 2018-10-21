@@ -29,11 +29,11 @@ public:
 		dinero_=1000;
 	}
 	void setCodigo(string code);
-	inline string getCodigo() {return cod_;}
+	inline string getCodigo() const {return cod_;}
 	void setDinero(int money);
-	inline int getDinero() {return dinero_;}
+	inline int getDinero() const {return dinero_;}
 	void setApuestas();
-	inline list <Apuesta> getApuestas() {return apuestas_;}
+	inline list <Apuesta> getApuestas() const {return apuestas_;}
 };
 
 #endif

@@ -7,8 +7,7 @@
 using namespace std;
 
 Persona::Persona(string nif, string name, string ap, int age, 
-				 string dir, string loc, string prov, 
-				 string country) {
+				 string dir, string loc, string prov, string country) {
 	dni_=nif;
 	nombre_=name;
 	apellidos_=ap;
@@ -59,7 +58,5 @@ string Persona::getApellidosyNombre() const {
 }
 
 bool Persona::mayor() {
-	if(edad_>=18)
-		return true;
-	else return false;
+	return(edad_>=18 ? true : false);
 }
