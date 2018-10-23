@@ -1,2 +1,2 @@
 # POO
-Prácticas POO
+Prácticas Programación Orientada a Objetos
