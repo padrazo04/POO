@@ -1,5 +1,6 @@
 //ruleta.cc
-//Body of class roulette
+//Body af class roulette
+<<<<<<< HEAD
 #include <iostream>		// cout object
 #include <string>		// string object
 #include <list>			// push_back(), empty(), erase() 
@@ -10,6 +11,18 @@
 
 #include "ruleta.h"		// Header of roulette
 #include "jugador.h"	// Jugador object
+=======
+#include <iostream>
+#include <string>
+#include <list>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
+#include <cstring>
+
+#include "ruleta.h"
+#include "jugador.h"
+>>>>>>> b68a61545bb82cb393a7761073b67604167a1f33
 
 Ruleta::Ruleta (Crupier crupi): crupier_(crupi) {
 	bola_=-1;
@@ -226,6 +239,7 @@ void Ruleta::getPremiosJugador(list <Jugador> :: iterator player, int &ganancias
 						premio-=atoi(amount);
 						gananciasBanca+=atoi(amount);
 						break;
+<<<<<<< HEAD
 					}
 					string result;
 					if(getBola()<=18)
@@ -248,3 +262,75 @@ void Ruleta::getPremiosJugador(list <Jugador> :: iterator player, int &ganancias
 		f1.close();									// Don't forget to close the file
 	} else exit(EXIT_FAILURE);						// If the file couldn't open, exit with value of error
 }
+=======
+					case 2: {
+						if(getBola()==0) {
+							premio-=atoi(amount);
+							gananciasBanca+=atoi(amount);
+							break;
+						}
+						string result;
+						if(getBola()==(1||3||5||7||9||12||14||16||18||19||21||23||25||27||30||32||34||36))
+							result="rojo";
+						else result="negro";
+
+						if(strcmp(result.c_str(),value)==0) {
+							premio+=atoi(amount);
+							gananciasBanca-=atoi(amount);
+						}
+						else {
+							premio-=atoi(amount);
+							gananciasBanca+=atoi(amount);
+						}
+					} break;
+					case 3: {
+						if(getBola()==0) {
+							premio-=atoi(amount);
+							gananciasBanca+=atoi(amount);
+							break;
+						}
+						string result;
+						if((getBola()%2)==0)
+							result="par";
+						else result="impar";
+
+						if(strcmp(result.c_str(),value)==0) {
+							premio+=atoi(amount);
+							gananciasBanca-=atoi(amount);
+						}
+						else {
+							premio-=atoi(amount);
+							gananciasBanca+=atoi(amount);
+						}
+					} break;
+					case 4: {
+						if(getBola()==0) { 
+							premio-=atoi(amount);
+							gananciasBanca+=atoi(amount);
+							break;
+						}
+						string result;
+						if(getBola()<=18)
+							result="bajo";
+						else result="alto";
+
+						if(strcmp(result.c_str(),value)==0) {
+							premio+=atoi(amount);
+							gananciasBanca-=atoi(amount);
+						}
+						else {
+							premio-=atoi(amount);
+							gananciasBanca+=atoi(amount);
+						}
+					} break;
+					//default: //Apuesta no valida
+				}
+			} 
+			(*i).setDinero((*i).getDinero()+premio);
+			f1.close();
+		} else exit(EXIT_FAILURE);
+	} 
+	escribeJugadores();
+	setBanca(getBanca()+gananciasBanca);
+}
+>>>>>>> b68a61545bb82cb393a7761073b67604167a1f33
