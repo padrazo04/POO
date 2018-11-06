@@ -12,11 +12,10 @@ private:
 	int d1_, d2_;
 	int lanzd1_, lanzd2_;
 	float valoresd1_, valoresd2_;
-	std::vector<int> ult5d1_[5];
-	std::vector<int> ult5d2_[5];
-	/*int ult5d1_[5], ult5d2_[5];*/
+	vector <int> ult5d1_;	//vector <int> ult5d1_(5); NO SIRVE
+	vector <int> ult5d2_;
 public:
-	Dados();	//constructor, funcion que se ejecuta automáticamente al declarar un objeto de la clase
+	Dados();
 	void lanzamiento();
 	inline int getLanzamientos1() const {return lanzd1_;}
 	inline int getLanzamientos2() const {return lanzd2_;}
