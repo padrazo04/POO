@@ -1,5 +1,5 @@
 //ruleta.cc
-//Body if class roulette
+//Body of class roulette
 #include <iostream>
 #include <string>
 #include <list>
