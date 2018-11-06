@@ -10,16 +10,6 @@
 
 #include "ruleta.h"		// Header of roulette
 #include "jugador.h"	// Jugador object
-#include <iostream>
-#include <string>
-#include <list>
-#include <fstream>
-#include <cstdlib>
-#include <ctime>
-#include <cstring>
-
-#include "ruleta.h"
-#include "jugador.h"
 
 Ruleta::Ruleta (Crupier crupi): crupier_(crupi) {
 	bola_=-1;
