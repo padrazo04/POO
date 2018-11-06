@@ -1,5 +1,5 @@
 //ruleta.cc
-//Body af class roulette
+//Body of class roulette
 <<<<<<< HEAD
 #include <iostream>		// cout object
 #include <string>		// string object
