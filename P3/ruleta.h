@@ -31,6 +31,10 @@ public:
 	void leeJugadores();
 	void giraRuleta();
 	void getPremios();
+
+	/**MÉTODOS PROPIOS**/
+
+	void getPremiosJugador(list <Jugador> :: iterator player, int &gananciasBanca);
 };
 
 #endif
