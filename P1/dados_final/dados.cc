@@ -47,10 +47,6 @@ bool Dados::setDado2(int x) {
 	} else return false;
 }
 
-int Dados::getDiferencia() const {
-	return(d1_>d2_ ? d1_-d2_ : d2_-d1_);
-}
-
 float Dados::getMedia1() const {
 	if(lanzd1_== 0)
 		return 0;
