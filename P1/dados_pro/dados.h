@@ -24,7 +24,7 @@ public:
 	bool setDado1(int x);
 	bool setDado2(int x);
 	inline int getSuma() const {return d1_+d2_;}
-	int getDiferencia() const ;
+	inline int getDiferencia() const {return (d1_>d2_ ? d1_-d2_ : d2_-d1_);}
 	float getMedia1() const ;
 	float getMedia2() const ;
 	void getUltimos1(int *v) const;
